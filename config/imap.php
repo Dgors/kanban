@@ -47,13 +47,13 @@ return [
     'accounts' => [
 
         'default' => [// account identifier
-            'host'  => 'mb.ci54.ru',
+            'host'  => 'imap.gmail.com',
             'port'  => 993,
             'protocol'  => 'imap', //might also use imap, [pop3 or nntp (untested)]
-            'encryption'    => 'starttls', // Supported: false, 'ssl', 'tls'
+            'encryption'    => 'ssl', // Supported: false, 'ssl', 'tls'
             'validate_cert' => true,
-            'username' => 'tsygankov.pg@ci54.ru',
-            'password' => 'Gdmk8LpN7A',
+            'username' => 'p.cygankov2001@gmail.com',
+            'password' => 'gtfrpcczllfzepvj',
             'authentication' => null,
             'proxy' => [
                 'socket' => null,

@@ -1,6 +1,5 @@
 
-    <div>
-        {{ __("You're logged in!") }}
-    </div>
-@include('profile.forms.delete-user-form')
-    <x-logout-input />
+
+@component('components.dashboard', ['data' => $tickets, 'column_names' => $column_names])
+@endcomponent
+<div class="hidden"></div>

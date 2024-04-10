@@ -7,23 +7,33 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Hash;
+Use App\Http\Controllers\MailReader;
+use App\Models\New_ticket;
+use App\Models\Dashboard_column;
 
 class ProfileController extends Controller
 {
     public function show(Request $request) {
-        dump($request->user()); //Доступ к аутентифицированному пользователю
-        dump(Auth::check()); //Проверка на аутентификацию
+        //dump($request->user()); //Доступ к аутентифицированному пользователю
+        //dump(Auth::check()); //Проверка на аутентификацию
         //$request->session()->regenerate();
-        dump($request->session()); //
-        dump($request->input());
+        //dump($request->session()); //
+       // dump($request->input());
         //Auth::logout();
-        dump(curl_init('mail.ru'));
+       // dump(curl_init('mail.ru'));
+        $mail = new MailReader;
+        dump($mail->mail());
         return view('profile.forms.restore-user-form');
+
     }
 
     public function create(Request $request) {
-        dump($request->user());
-        return view('dashboards');
+        //dump($request->user());
+        $tickets = New_ticket::select('text_subject', 'created_at')->get();
+        //dump($tickets);
+        $column_names = Dashboard_column::select('column_name')->get();
+
+        return view('layouts.dashboard', ['tickets' => $tickets, 'column_names' => $column_names]);
 
     }
 

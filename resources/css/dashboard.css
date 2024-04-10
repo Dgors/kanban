@@ -1,0 +1,181 @@
+
+html {
+
+}
+body {
+    margin: 0;
+    background-color: hsl(204, 65%, 35%);
+    max-height: 100%;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+p, h3, ol {
+    margin: 0;
+}
+.nav-bar {
+    position: relative;
+    background-color: hsl(204, 65%, 60%);
+}
+.nav-bar p {
+    padding: 8px 12px;
+}
+.main {
+    box-sizing: content-box;
+}
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1 1;
+}
+.board {
+    display: flex;
+    list-style: none;
+    row-gap: 8px;
+}
+.main-board-content {
+    display: flex;
+
+    max-height: 100vh;
+
+    margin-top: 10px;
+    flex-grow: 1;
+
+}
+.content-board {
+    display: block;
+    width: 100%;
+
+}
+.ticket-board {
+    padding: 5px 10px;
+    overflow-x: auto;
+    scrollbar-color: #fff6 #00000026;
+    scrollbar-width: auto;
+    top: -2px;
+    -webkit-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    position: relative;
+    left: 0;
+    max-height: calc(100% - 52px);
+    min-height: calc(100% - 52px);
+}
+.ticket-header {
+    margin: 10px 6px;
+}
+.list-ticket {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    position: relative;
+}
+.tickets-column {
+
+    min-width: 350px;
+    max-width: 350px;
+    background-color: hsl(204, 82%, 30%);
+    border-radius: 10px;
+}
+.tickets-column:not(:last-child) {
+    margin-right: 10px;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    background-color: hsla(0, 100%, 0%, 90%);
+    padding: 2px 4px;
+    border-radius: 10px;
+}
+.ticket {
+    padding: 12px 8px 4px;
+    background-color: hsla(0, 2%, 37%, 0.16);
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+.ticket:hover {
+    border: 2px solid hsl(204, 82%, 40%);
+}
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 6px 0;
+}
+.add-ticket-button {
+    border: none;
+    padding: 8px 8px;
+    background-color: transparent;
+    border-radius: 10px;
+    width: 100%;
+}
+.add-ticket-button:hover {
+    border-radius: 10px;
+    background-color: hsla(0, 2%, 37%, 0.29);
+}
+.add-ticket-button, .ticket {
+    transition: all 0.15s ease;
+}
+.dashboard-text {
+    color: hsla(0, 100%, 100%, 0.8);
+    text-decoration: none;
+}
+.ticket-subject {
+
+    font-size:14px;
+    font-weight: 400;
+}
+.ticket-subject{
+    margin: 5px;
+    min-height: 60px;
+    min-width: 100%;
+}
+.ticket-created {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+.ticket-created-time {
+    font-size: 10px;
+
+}
+.ticket-status-container {
+    margin-bottom: 5px;
+    display: flex;
+}
+.ticket-status {
+    display: inline-flex;
+    flex-wrap: wrap;
+    row-gap: 3px;
+}
+.status-form {
+    min-width: 40px;
+    border-radius: 5px;
+}
+.status-form:not(:last-child) {
+    margin-right: 5px;
+}
+.status-min {
+    max-width: 40px;
+    height: 8px;
+    content-visibility: hidden;
+    transition: all 0.5s ease 0.1s, font-size 0.3s linear, font-size 0.5ms linear 5s;
+}
+.status-max {
+    max-width: max-content;
+    padding: 1px 5px;
+    height: max-content;
+    font-size: 12px;
+    transition: all 0.5s ease 0.5s, font-size 0ms linear 0.5s;
+}
+.status-color {
+    background:red;
+}
+.add-ticket-text-color {
+
+}

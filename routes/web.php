@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MailReader;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,3 +36,4 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('mail', [App\Http\Controllers\MailReader::class, 'mail']);
+
